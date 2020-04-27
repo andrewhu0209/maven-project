@@ -1,0 +1,1 @@
+Hello, welcome to this course! Pipeline as code section.
