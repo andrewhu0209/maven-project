@@ -1,1 +1,1 @@
-Hello, Welcome to this course!
+Hello, welcome to this course! Pipeline as code section.
