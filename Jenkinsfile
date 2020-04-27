@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy to staging'){
             steps{
                 echo 'deploy to staging begin'
-                build job:'delpoy-to-staging'
+                build job:'deploy-to-staging'
             }
         }
     }
