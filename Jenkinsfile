@@ -22,6 +22,7 @@ pipeline {
             post {
                 success {
                     echo '開始存檔...'
+                    sh "whoami"
                     archiveArtifacts artifacts: '**/target/*.war'
                 }
             }
