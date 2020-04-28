@@ -32,15 +32,15 @@ pipeline {
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        sh "chmod 400 /Users/andrew/Documents/tomcat-demo.pem"
-                        sh "scp -i /Users/andrew/Documents/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat8/webapps"
+                        
+                        sh "scp -i /var/root/.ssh/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat8/webapps"
                     }
                 }
 
                 stage ("Deploy to Production"){
                     steps {
-                        sh "chmod 400 /Users/andrew/Documents/tomcat-demo.pem"
-                        sh "scp -i /Users/andrew/Documents/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat8/webapps"
+                        
+                        sh "scp -i /var/root/.ssh/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat8/webapps"
                     }
                 }
             }
